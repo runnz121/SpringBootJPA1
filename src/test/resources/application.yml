@@ -1,0 +1,24 @@
+#test 폴더에만든 resources의 application yml실행시
+#tes 시에는 해당 yml에 따라서 작동됨
+spring:
+#  datasource:
+#    url: jdbc:h2:mem:test #외부 데이터 베이스가아닌 인-메모리에 객체 저장
+#    username: sa
+#    password:
+#    driver-class-name: org.h2.Driver
+#
+#
+#  jpa:
+#    hibernate:
+#      ddl-auto: create-drop
+#    properties:
+#      hibernate:
+#        show_sql: true  >>system out으로 log찍음
+#        format_sql: true
+
+#스프링부트는 test시 지정이 없으면 자동적으로 인메모리 저장방식으로 돌린다.
+
+logging:
+  level:
+    org.hibernate.SQL: debug # logger에 log 찍음
+    org.hibernate.type: trace # 파라미터 로그를 찍어준다
